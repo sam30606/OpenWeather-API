@@ -272,6 +272,7 @@ input {
   font-size: 1rem;
   border-color: transparent;
   padding: 0.5rem 1rem;
+  outline: none;
 }
 
 input::placeholder {
