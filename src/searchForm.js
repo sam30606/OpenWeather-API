@@ -10,6 +10,14 @@ const input = getElement('[name="Location"]');
 
 // console.log(form, input);
 
+const sentURL = async () => {
+  const value = input.value;
+  const baseURL = `https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=9d6dfc926f81e26a8339901dbb287995`;
+  if (value) {
+    await presentData(`${baseURL}`);
+  }
+};
+
 form.addEventListener('keypress', (e) => {
   // //   console.log('input', input.value);
   // e.preventDefault();
@@ -22,16 +30,8 @@ form.addEventListener('keypress', (e) => {
   // }
   if (e.key === 'Enter') {
     console.log(e);
-    sentURL;
+    sentURL();
   }
 });
-
-const sentURL = async () => {
-  const value = input.value;
-  const baseURL = `https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=9d6dfc926f81e26a8339901dbb287995`;
-  if (value) {
-    await presentData(`${baseURL}`);
-  }
-};
 
 searchIcon.addEventListener('click', sentURL);
