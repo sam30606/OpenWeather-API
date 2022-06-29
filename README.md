@@ -7,3 +7,9 @@
 ### v1.1
 
 讓 Search Icon working
+
+### v2.0
+
+Geocoding API 改用 Google 的
+些微 CSS 調整
+search-box 按下 hidden
