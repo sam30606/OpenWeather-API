@@ -1,5 +1,5 @@
 import getElement from './getElement.js';
-import presentData from './presentData.js';
+import presentSerchBox from './presentSerchBox.js';
 import { hiddenSearchBox, showSearchBox } from './searchBoxToggle.js';
 const form = getElement('.search-form');
 const searchBox = getElement('.search-box');
@@ -8,11 +8,11 @@ const input = getElement('[name="Location"]');
 
 const googleAPIKEY = 'AIzaSyCBq0e5XOQjj4gkPMXjezKcR4-xYmtbkv0';
 
-const sentURL = async () => {
+const sentURL = () => {
   const value = input.value;
   const baseURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${value}&language=zh-TW&key=${googleAPIKEY}`;
   if (value) {
-    await presentData(`${baseURL}`);
+    presentSerchBox(`${baseURL}`);
   }
 };
 

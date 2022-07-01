@@ -9,11 +9,11 @@ const inputWrapper = getElement('.inputWrapper');
 const inputWrapperCSS = inputWrapper.classList;
 
 export const hiddenSearchBox = () => {
-  searchBoxCSS.add('hidden');
+  searchBoxCSS.add('hiddenBox');
   inputWrapperCSS.add('radius90');
   searchItem.innerHTML = '';
 };
 export const showSearchBox = () => {
-  searchBoxCSS.remove('hidden');
+  searchBoxCSS.remove('hiddenBox');
   inputWrapperCSS.remove('radius90');
 };
