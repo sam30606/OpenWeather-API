@@ -13,3 +13,7 @@
 Geocoding API 改用 Google 的
 些微 CSS 調整
 search-box 按下 hidden
+
+### v2.1
+
+search-item -> searcg-items

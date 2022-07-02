@@ -1,6 +1,6 @@
 import getElement from './getElement.js';
 
-const searchItem = getElement('.search-item');
+const searchItems = getElement('.search-items');
 
 const searchBox = getElement('.search-box');
 const searchBoxCSS = searchBox.classList;
@@ -11,7 +11,7 @@ const inputWrapperCSS = inputWrapper.classList;
 export const hiddenSearchBox = () => {
   searchBoxCSS.add('hiddenBox');
   inputWrapperCSS.add('radius90');
-  searchItem.innerHTML = '';
+  searchItems.innerHTML = '';
 };
 export const showSearchBox = () => {
   searchBoxCSS.remove('hiddenBox');

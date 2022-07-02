@@ -1,10 +1,10 @@
 import getElement from './getElement.js';
 
-const searchItem = getElement('.search-item');
-const displayWeathers = (weathersDB) => {
+const searchItems = getElement('.search-items');
+const displaySearchBox = (weathersDB) => {
   console.log('weathersDB', weathersDB);
   if (weathersDB.length === 0) {
-    searchItem.innerHTML = `<p class="noResult">Sorry! No result found</p>`;
+    searchItems.innerHTML = `<p class="noResult">Sorry! No result found</p>`;
   } else {
     const fixWeathers = weathersDB
       .map((items) => {
@@ -26,9 +26,9 @@ const displayWeathers = (weathersDB) => {
         }
 
         return `        
-    <li class="search-item">
-    <div class="search-list">
-      <p>${country}-${cityName}</p>
+    <li class="search-item" data-lat=1 data-lng="">
+    <div class="search-list" data-lat=2 data-lng="">
+      <p>${cityName}</p>
       <p>${temp_min}°C / ${temp_max}°C</p>
       <p><i class="fas fa-tint"></i>${humi}%</p>
       <div class="weatherIcon"><img src="https://openweathermap.org/img/wn/${icon}@4x.png" alt="" /><p>${description}</p></div>
@@ -37,8 +37,8 @@ const displayWeathers = (weathersDB) => {
       })
       .join('');
     // sectionCenter.innerHTML = fixWeathers;
-    searchItem.innerHTML = fixWeathers;
+    searchItems.innerHTML = fixWeathers;
   }
 };
 
-export default displayWeathers;
+export default displaySearchBox;

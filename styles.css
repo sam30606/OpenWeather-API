@@ -225,11 +225,11 @@ h4 {
   border-radius: 0 0 10px 10px;
   padding-bottom: 4px;
 }
-.search-item {
+.search-items {
   display: flex;
   flex-direction: column;
 }
-.search-item .noResult {
+.search-items .noResult {
   text-align: center;
 }
 .search-case li {

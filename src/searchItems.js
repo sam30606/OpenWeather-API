@@ -1,11 +1,11 @@
 import getElement from './getElement.js';
 
-const searchItem = getElement('.search-item');
+const searchList = getElement('.search-item');
 
-const getItemData = (Items) => {
-  console.log(Items);
+const getListData = (items) => {
+  console.log(items);
 };
 
-searchItem.addEventListener('click', (e) => {
-  console.log(e);
+searchList.addEventListener('click', (e) => {
+  console.log(e.target.dataset.lat);
 });
