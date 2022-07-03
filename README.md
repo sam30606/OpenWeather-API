@@ -17,3 +17,9 @@ search-box 按下 hidden
 ### v2.1
 
 search-item -> searcg-items
+
+### v3.0
+
+CSS 有些標籤改變
+WeatherDetail 正在切版
+JS 解構可以再寫一個 fu 出來

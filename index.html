@@ -16,110 +16,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="search-form">
-      <div class="inputWrapper">
-        <input type="text" placeholder="Search Location " name="Location" />
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="search-box">
-        <div class="search-case">
-          <ul class="search-items">
-            <!-- <li>
-              <div class="search-list">
-                <p>臺灣-台北市</p>
-                <p>27°C~28°C</p>
-                <p><i class="fas fa-tint"></i>90%</p>
-                <img src="./03d@4x.png" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="search-list">
-                <p>臺灣-台北市</p>
-                <p>27°C~28°C</p>
-                <p><i class="fas fa-tint"></i>90%</p>
-                <img src="./03d@4x.png" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="search-list">
-                <p>臺灣-台北市</p>
-                <p>27°C~28°C</p>
-                <p><i class="fas fa-tint"></i>90%</p>
-                <img src="./03d@4x.png" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="search-list">
-                <p>臺灣-台北市</p>
-                <p>27°C~28°C</p>
-                <p><i class="fas fa-tint"></i>90%</p>
-                <img src="./03d@4x.png" alt="" />
-              </div>
-            </li>
-            <li>
-              <div class="search-list">
-                <p>臺灣-台北市</p>
-                <p>27°C~28°C</p>
-                <p><i class="fas fa-tint"></i>90%</p>
-                <img src="./03d@4x.png" alt="" />
-              </div>
-            </li> -->
-          </ul>
+    <div class="content">
+      <nav></nav>
+      <div class="search">
+        <div class="search-form">
+          <div class="inputWrapper">
+            <input type="text" placeholder="Search Location " name="Location" />
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="search-box">
+            <ul class="search-items">
+              <!-- <li id="search-list" data-lat="25.033" data-lng="121.5654">
+                <div class="search-data">
+                  <p>台灣台北市</p>
+                  <p>26°C / 29°C</p>
+                  <p><i class="fas fa-tint"></i>66%</p>
+                  <div class="weatherIcon">
+                    <img
+                      src="https://openweathermap.org/img/wn/02n@4x.png"
+                      alt=""
+                    />
+                    <p>晴，少雲</p>
+                  </div>
+                </div>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <section class="section weathers">
-      <div class="section-center">
-        <!-- <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a>
-        <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a>
-        <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a>
-        <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a>
-        <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a>
-        <a href="">
-          <article class="weather">
-            <h3>Taipei</h3>
-            <img src="./03d@4x.png" alt="" />
-            <p>27°C~28°C</p>
-            <p><i class="fas fa-umbrella"></i>90%</p>
-          </article>
-        </a> -->
+      <div class="singleWeather">
+        <div class="info-1">
+          <p>臺北市</p>
+          <p>台灣-TW</p>
+          <p>25°C / 29°C</p>
+          <p><i class="fas fa-tint"></i>67%</p>
+        </div>
+        <div class="info-2">
+          <img src="./03d@4x.png" alt="" />
+          <p>Sunrise / 12:19:03 AM</p>
+          <p>Sunset / 12:19:03 AM</p>
+        </div>
+        <div class="forecast"></div>
       </div>
-    </section>
+    </div>
   </body>
 
   <script type="module" src="./app.js"></script>

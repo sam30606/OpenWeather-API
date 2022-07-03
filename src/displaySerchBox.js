@@ -10,14 +10,14 @@ const displaySearchBox = (weathersDB) => {
       .map((items) => {
         let {
           cityZHName,
-          sys,
           main: weatherData,
           name: cityName,
           weather: weatherDesc,
+          coord: geocoding,
         } = items;
         const { icon, description } = weatherDesc[0];
         let { temp_max, temp_min, humidity: humi } = weatherData;
-        let { country } = sys;
+        let { lat, lon } = geocoding;
         temp_max = Math.trunc(temp_max);
         temp_min = Math.trunc(temp_min);
 
@@ -26,8 +26,8 @@ const displaySearchBox = (weathersDB) => {
         }
 
         return `        
-    <li class="search-item" data-lat=1 data-lng="">
-    <div class="search-list" data-lat=2 data-lng="">
+    <li id="search-list" data-lat=${lat} data-lng=${lon}>
+    <div class="search-data">
       <p>${cityName}</p>
       <p>${temp_min}°C / ${temp_max}°C</p>
       <p><i class="fas fa-tint"></i>${humi}%</p>

@@ -1,11 +1,21 @@
 import getElement from './getElement.js';
+import { hiddenSearchBox } from './searchBoxToggle.js';
 
-const searchList = getElement('.search-item');
+const searchItem = getElement('.search-items');
 
-const getListData = (items) => {
-  console.log(items);
-};
+searchItem.addEventListener('click', (e) => {
+  let eTarget = e.target;
+  for (let i = 1; i <= 3; i++) {
+    if (!eTarget.dataset.lat) {
+      eTarget = eTarget.parentElement;
+    } else {
+      break;
+    }
+  }
 
-searchList.addEventListener('click', (e) => {
-  console.log(e.target.dataset.lat);
+  let singleGeocoding = {};
+  singleGeocoding.lat = eTarget.dataset.lat;
+  singleGeocoding.lng = eTarget.dataset.lng;
+  console.log(singleGeocoding);
+  hiddenSearchBox();
 });

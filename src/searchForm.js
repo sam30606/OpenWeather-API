@@ -1,8 +1,8 @@
 import getElement from './getElement.js';
 import presentSerchBox from './presentSerchBox.js';
-import { hiddenSearchBox, showSearchBox } from './searchBoxToggle.js';
+
 const form = getElement('.search-form');
-const searchBox = getElement('.search-box');
+
 const searchIcon = getElement('.fa-search');
 const input = getElement('[name="Location"]');
 
@@ -18,11 +18,8 @@ const sentURL = () => {
 
 form.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
-    console.log(e);
-    showSearchBox();
     sentURL();
   }
 });
 
 searchIcon.addEventListener('click', sentURL);
-searchBox.addEventListener('click', hiddenSearchBox);
