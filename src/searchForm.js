@@ -1,16 +1,15 @@
 import getElement from './getElement.js';
 import presentSerchBox from './presentSerchBox.js';
+import { setGeocodingURL } from './setAPIURL.js';
 
 const form = getElement('.search-form');
 
-const searchIcon = getElement('.fa-search');
+const searchIcon = getElement('.fa-magnifying-glass');
 const input = getElement('[name="Location"]');
-
-const googleAPIKEY = 'AIzaSyCBq0e5XOQjj4gkPMXjezKcR4-xYmtbkv0';
 
 const sentURL = () => {
   const value = input.value;
-  const baseURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${value}&language=zh-TW&key=${googleAPIKEY}`;
+  const baseURL = setGeocodingURL(value);
   if (value) {
     presentSerchBox(`${baseURL}`);
   }

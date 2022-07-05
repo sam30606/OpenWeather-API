@@ -23,3 +23,7 @@ search-item -> searcg-items
 CSS 有些標籤改變
 WeatherDetail 正在切版
 JS 解構可以再寫一個 fu 出來
+
+### v4.0
+
+切板完成，手機 RWD 測試

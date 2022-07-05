@@ -9,10 +9,7 @@
       content="upgrade-insecure-requests"
     />
     <title>Weather</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
+    <script src="https://kit.fontawesome.com/77b091a01f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,7 +19,7 @@
         <div class="search-form">
           <div class="inputWrapper">
             <input type="text" placeholder="Search Location " name="Location" />
-            <i class="fa fa-search"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <div class="search-box">
             <ul class="search-items">
@@ -44,20 +41,30 @@
           </div>
         </div>
       </div>
-      <div class="singleWeather">
+      <section class="singleWeather">
         <div class="info-1">
-          <p>臺北市</p>
-          <p>台灣-TW</p>
-          <p>25°C / 29°C</p>
-          <p><i class="fas fa-tint"></i>67%</p>
+          <h1>臺北市</h1>
+          <h2>台灣-TW</h2>
+          <p><i class="fa-solid fa-sun"></i></i>12:19:03 AM</p>
+          <p><i class="fa-regular fa-sun"></i></i>12:19:03 AM</p>
         </div>
         <div class="info-2">
           <img src="./03d@4x.png" alt="" />
-          <p>Sunrise / 12:19:03 AM</p>
-          <p>Sunset / 12:19:03 AM</p>
+          <p>25°C / 29°C</p>
+          <p><i class="fa-solid fa-droplet"></i></i>67%</p>
         </div>
-        <div class="forecast"></div>
-      </div>
+        <div class="forecast">
+          <div class="forecast-data">
+            <h6>2022-07-05 18:00:00</h6>
+            <img src="./03d@4x.png" alt="" />
+            <p>多雲</p>
+            <p>25°C / 29°C</p>
+            <p><i class="fa-solid fa-droplet"></i></i>67%</p>
+            <p><i class="fa-solid fa-umbrella"></i>10%</p>
+            <p><i class="fa-solid fa-wind"></i>0.77</p>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 

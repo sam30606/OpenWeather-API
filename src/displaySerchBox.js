@@ -9,28 +9,38 @@ const displaySearchBox = (weathersDB) => {
     const fixWeathers = weathersDB
       .map((items) => {
         let {
-          cityZHName,
           main: weatherData,
-          name: cityName,
           weather: weatherDesc,
           coord: geocoding,
+          address,
         } = items;
         const { icon, description } = weatherDesc[0];
         let { temp_max, temp_min, humidity: humi } = weatherData;
         let { lat, lon } = geocoding;
+
+        for (let i = 0; i < address.length; i++) {
+          let addressType = address[i].types[0];
+
+          switch (addressType) {
+            case 'country':
+              var countryEN = address[i].short_name;
+              var countryZH = address[i].long_name;
+              break;
+            case 'administrative_area_level_1':
+              var cityNameZH = address[i].short_name;
+              break;
+          }
+        }
+
         temp_max = Math.trunc(temp_max);
         temp_min = Math.trunc(temp_min);
 
-        if (cityZHName) {
-          cityName = cityZHName;
-        }
-
         return `        
-    <li id="search-list" data-lat=${lat} data-lng=${lon}>
+    <li id="search-list" data-lat=${lat} data-lng=${lon} data-countryen=${countryEN} data-countryzh=${countryZH} data-citynamezh=${cityNameZH}>
     <div class="search-data">
-      <p>${cityName}</p>
+      <p>${countryZH}-${cityNameZH}</p>
       <p>${temp_min}°C / ${temp_max}°C</p>
-      <p><i class="fas fa-tint"></i>${humi}%</p>
+      <p><i class="fa-solid fa-droplet"></i></i>${humi}%</p>
       <div class="weatherIcon"><img src="https://openweathermap.org/img/wn/${icon}@4x.png" alt="" /><p>${description}</p></div>
     </div>
   </li>`;

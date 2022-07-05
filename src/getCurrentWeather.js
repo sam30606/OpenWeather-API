@@ -1,21 +1,22 @@
 import fetchData from './fetchData.js';
-const weatherAPIKey = '9d6dfc926f81e26a8339901dbb287995';
+import { setCurrentURL } from './setAPIURL.js';
+
 const getWeathers = (locations) => {
   const locationsResults = locations.results;
   const newWeathers = Promise.all(
     locationsResults.map(async (items) => {
       const {
         geometry,
-        address_components,
         formatted_address: cityZHName,
+        address_components: address,
       } = items;
-      // const { long_name: cityZHName } = address_components[0];
       const { location } = geometry;
 
-      let weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&appid=${weatherAPIKey}&units=metric&lang=zh_tw`; //Current weather data
+      let weatherURL = setCurrentURL(location.lat, location.lng);
       const weathers = await fetchData(weatherURL);
-      console.log('oneWeather', weathers);
-      weathers.cityZHName = cityZHName;
+      console.log('searchWeather', weathers);
+
+      weathers.address = address;
       return weathers;
     })
   );
