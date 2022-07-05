@@ -163,7 +163,6 @@ h4 {
 .content {
   position: relative;
   display: grid;
-  /* grid-auto-flow: row; */
   grid-template-rows: 10vh 10vh 70vh;
   justify-content: center;
   height: 100vh;
@@ -272,15 +271,13 @@ input::placeholder {
 
 .singleWeather {
   display: grid;
-  grid-template-columns: [column-1] 25vw [column-2] 25vw;
-
-  width: 50vw;
-  height: 65vw;
-  background-color: #222;
+  grid-template-columns: [line-1] 50% [line-2] 50%;
+  grid-template-rows: [line-1] 60% [line-2] 40%;
+  max-width: 600px;
+  max-height: 800px;
+  /* background-color: #222; */
 }
 .info-1 {
-  width: 25vw;
-  height: 35vw;
   background-color: rgba(89, 204, 89, 0.679);
   padding: 1rem;
 }
@@ -290,8 +287,6 @@ input::placeholder {
   padding-top: 1rem;
 }
 .info-2 {
-  width: 25vw;
-  height: 35vw;
   background-color: rgb(218, 85, 85);
   padding: 1rem;
   text-align: right;
@@ -303,12 +298,12 @@ input::placeholder {
 }
 
 .forecast {
-  width: 50vw;
-  height: 30vw;
+  grid-column: 1/3;
   background-color: rgb(128, 128, 254);
   display: grid;
   grid-template-columns: repeat(40, 100px);
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .forecast-data {
   display: grid;
