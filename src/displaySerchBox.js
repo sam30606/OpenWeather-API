@@ -26,8 +26,13 @@ const displaySearchBox = (weathersDB) => {
               var countryEN = address[i].short_name;
               var countryZH = address[i].long_name;
               break;
-            case 'administrative_area_level_1':
+            case 'administrative_area_level_3':
               var cityNameZH = address[i].short_name;
+              break;
+            case 'administrative_area_level_1':
+              if (address.length < 4) {
+                var cityNameZH = address[i].short_name;
+              }
               break;
           }
         }

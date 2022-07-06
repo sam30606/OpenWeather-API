@@ -1,10 +1,15 @@
 import presentSerchBox from './src/presentSerchBox.js';
+import presentSingleWeather from './src/presentSingleWeather.js';
 import './src/searchForm.js';
 import './src/searchItems.js';
 
-const googleAPIKEY = 'AIzaSyCBq0e5XOQjj4gkPMXjezKcR4-xYmtbkv0';
-const defaultURL = `https://maps.googleapis.com/maps/api/geocode/json?address=臺北市&language=zh-TW&key=${googleAPIKEY}`;
-
+const tempgeo = {
+  cityNameZH: '台北市',
+  countryEN: 'TW',
+  countryZH: '台灣',
+  lat: '25.066',
+  lng: '121.2654',
+};
 window.addEventListener('DOMContentLoaded', () => {
-  presentSerchBox(defaultURL);
+  presentSingleWeather(tempgeo);
 });

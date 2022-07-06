@@ -1,7 +1,7 @@
 import fetchData from './fetchData.js';
-import getSingleWeatherURL from './getSingleWeatherURL.js';
 import setSingleWeatherData from './setSingleWeatherData.js';
 import { setCurrentURL, setForecastURL } from './setAPIURL.js';
+import displatSingleWeather from './displatSingleWeather.js';
 
 const presentSingleWeather = async (singleGeocoding) => {
   const { lat, lng } = singleGeocoding;
@@ -15,6 +15,7 @@ const presentSingleWeather = async (singleGeocoding) => {
     currentWeatherOri,
     singleWeatherOri
   );
+  displatSingleWeather(singleWeatherData);
 };
 
 export default presentSingleWeather;
